@@ -3,8 +3,6 @@
 */
 
 
-
-
 /* Moves the robo forward */
 exports.forward = function(){
 	console.log('moving forward');
