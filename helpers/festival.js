@@ -1,0 +1,1 @@
+/* Helper method for festival TTS engine */
