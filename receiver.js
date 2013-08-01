@@ -6,6 +6,7 @@ var events = require('events');
 var RoboEvents = {};
 
 
+/* Twitter Events */
 
 RoboEvents.Twitter = function(){};
 RoboEvents.Twitter.prototype = new events.EventEmitter;
@@ -15,7 +16,7 @@ RoboEvents.Twitter.prototype.init = function(){
 	var self = this;
 	var twitterStream = require('./helpers/twitter.js');
 
-	var req = twitterStream.streamSearch('google');
+	var req = twitterStream.streamSearch('NodeRobo');
 
 
 	req.addListener('response',function(response){
@@ -40,19 +41,38 @@ RoboEvents.Twitter.prototype.init = function(){
 
 }
 
-module.exports = RoboEvents;
+/* End Twitter Events */
+
 
 
 /* Sensor Events */
 
 /* Firebase Events */
 
-/* Twitter Events */
+RoboEvents.Firebase = function(){};
+RoboEvents.Firebase.prototype = new events.EventEmitter;
+
+RoboEvents.Firebase.prototype.init = function(){
+	var self = this;
+	var roboCloudStorage = require('./helpers/firebase.js');
+
+	roboCloudStorage.mood.on('value',function(snapshot){
+		self.emit('moodChange',snapshot.val());
+	})
 
 
+	return self;
+}
 
 
 /* Facebook Events */
+
+
+/* Expose the RoboEvents Module */
+module.exports = RoboEvents;
+
+
+
 
 
 

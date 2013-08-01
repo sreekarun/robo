@@ -15,6 +15,11 @@ twitter.init()
 	});
 
 
+var firebase = new RoboEvents.Firebase;
 
+firebase.init()
+	.on('moodChange',function(mood){
+		console.log(mood + "robo");
+	});
 
 
