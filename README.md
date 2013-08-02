@@ -9,11 +9,11 @@ A node based robot based on Raspberry PI and Arduino ( with johnny five )
 
 ## What Can Robo Do? ##
 
-Move around
-Talk 
-Tweet 
-Video Stream
-Respond to commands
+* Move around
+* Talk 
+* Tweet 
+* Video Stream
+* Respond to commands
 
 ## Technology Stack ##
 
