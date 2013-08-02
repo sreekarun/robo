@@ -4,18 +4,16 @@
 
 */
 
-
 var RoboEvents = require('./receiver.js');
 
 var twitter = new RoboEvents.Twitter;
+var firebase = new RoboEvents.Firebase;
 
 twitter.init()
 	.on('stream.tweet',function(data){
 		console.log(data.text);
 	});
 
-
-var firebase = new RoboEvents.Firebase;
 
 firebase.init()
 	.on('moodChange',function(mood){
