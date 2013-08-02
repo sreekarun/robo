@@ -1,4 +1,4 @@
-robo ( Latest functional on the way - work in progress :) )
+robo ( Latest functional code on the way - work in progress :) )
 ====
 
 A node based robot based on Raspberry PI and Arduino ( with johnny five )
