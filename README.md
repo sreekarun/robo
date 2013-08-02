@@ -10,6 +10,7 @@ A node based robot based on Raspberry PI and Arduino ( with johnny five )
 ## What Can Robo Do? ##
 
 * Move around
+* show emotions 
 * Talk 
 * Tweet 
 * Video Stream
@@ -38,5 +39,21 @@ The motor drivers are driven by Arduino which inturn is driven by Raspberry pi u
 ### Speech ###
 
 The speech component is a node wrapper around the festival utility in linux. 
+
+### Real Time Communication ###
+
+Thanks to Firebase, real time communication has become so easy. The Robo's remote controller ( A web app ) and the on board computer ( Raspberry Pi ) communicates using the Firebase Storage as the common point.
+
+### Showing emotions ###
+
+The Face of the Robo is built using a simple phonegap App. Which subscribes to the cloud storage (Firebase ) events.
+
+### Sensors ###
+
+* Geo location - The phonegap application pushes the geolocation information back to cloud
+* Accelerometer - The phonegap application pushes the accelerometer information back to cloud on a regular interval
+* Light Sensor - Simple LDR module connected to Arduino. Pushes the room ambience
+* Ultra Sound Sensors - Sensors attached to Arduino protects the Robo from reckless driving and collition. Robo autostops when it is harmful for him.
+* PIR Sensor - Detects motion / human presence.
 
 
