@@ -14,7 +14,8 @@
   "license": "BSD",
   "dependencies": {
     "firebase": "~0.6.1",
-    "oauth": "~0.9.10"
+    "oauth": "~0.9.10",
+    "johnny-five": "~0.7.1"
   },
   "devDependencies": {}
 }
