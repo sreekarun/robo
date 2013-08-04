@@ -21,3 +21,7 @@ firebase.init()
 	});
 
 
+
+//Test the motion detection module
+
+require('./motion-detection.js');
