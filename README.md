@@ -55,5 +55,8 @@ The Face of the Robo is built using a simple phonegap App. Which subscribes to t
 * Light Sensor - Simple LDR module connected to Arduino. Pushes the room ambience
 * Ultra Sound Sensors - Sensors attached to Arduino protects the Robo from reckless driving and collition. Robo autostops when it is harmful for him.
 * PIR Sensor - Detects motion / human presence.
+    PIR Sensor used has three pins. Vcc, Output and Gnd. The output is one bit and triggers on motion. 
+    ![PIR](https://raw.github.com/sreekarun/robo/screenshots/images/pir.png "PIR")
+
 
 
