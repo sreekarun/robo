@@ -24,4 +24,8 @@ firebase.init()
 
 //Test the motion detection module
 
-require('./motion-detection.js');
+//require('./motion-detection.js');
+
+//Test the motor module
+
+require('./motion-control.js');
