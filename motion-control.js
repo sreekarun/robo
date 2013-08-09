@@ -5,7 +5,7 @@
 
 var five = require("johnny-five"),
     board = new five.Board(),
-    var leftFront, rightFront, leftBack, rightBack;
+    leftFront, rightFront, leftBack, rightBack;
 
     leftFront = new five.Motor({
       pins: {
