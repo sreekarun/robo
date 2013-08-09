@@ -35,7 +35,7 @@ firebase.init()
 			}
 
 			if( motion == "stop"){
-				roboMotion.forward();
+				roboMotion.stop();
 			}
 		}
 		
