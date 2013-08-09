@@ -24,17 +24,21 @@ firebase.init()
 	})
 	.on('motionControl',function(motion){
 		console.log(motion + " robo");
-		if( motion == "forward"){
-			roboMotion.forward();
-		}
 
-		if( motion == "back"){
-			roboMotion.back();
-		}
+		roboMotion.board.on('ready',function(){
+			if( motion == "forward"){
+				roboMotion.forward();
+			}
 
-		if( motion == "stop"){
-			roboMotion.stop();
-		}
+			if( motion == "back"){
+				roboMotion.back();
+			}
+
+			if( motion == "stop"){
+				roboMotion.forward();
+			}
+		});
+		
 	});
 
 

@@ -105,7 +105,7 @@ board.on("ready", function() {
 
 
 
-  
+
   /* Moves the robo forward */
   exports.forward = function(){
     console.log('moving forward');
@@ -144,6 +144,8 @@ board.on("ready", function() {
     leftBack.stop();
     rightBack.stop();
   }
+
+  exports.board = board;
 
 
 
