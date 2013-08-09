@@ -4,10 +4,39 @@
 
 
 var five = require("johnny-five"),
-    board = new five.Board();
+    board = new five.Board(),
+    var leftFront, rightFront, leftBack, rightBack;
+
+    leftFront = new five.Motor({
+      pins: {
+        pwm: 11,
+        dir: 12
+      }
+    });
+
+    rightFront = new five.Motor({
+      pins: {
+        pwm: 9,
+        dir: 8
+      }
+    });
+
+    leftBack = new five.Motor({
+      pins: {
+        pwm: 6,
+        dir: 7
+      }
+    });
+    
+    rightBack = new five.Motor({
+      pins: {
+        pwm: 3,
+        dir: 2
+      }
+    });
 
 board.on("ready", function() {
-  var leftFront, rightFront, leftBack, rightBack;
+  
   /*
     Bi-Directional Motors can be initialized by:
 
@@ -31,33 +60,7 @@ board.on("ready", function() {
    */
 
 
-  leftFront = new five.Motor({
-    pins: {
-      pwm: 11,
-      dir: 12
-    }
-  });
 
-  rightFront = new five.Motor({
-    pins: {
-      pwm: 9,
-      dir: 8
-    }
-  });
-
-  leftBack = new five.Motor({
-    pins: {
-      pwm: 6,
-      dir: 7
-    }
-  });
-  
-  rightBack = new five.Motor({
-    pins: {
-      pwm: 3,
-      dir: 2
-    }
-  });
 
 
 
@@ -106,50 +109,53 @@ board.on("ready", function() {
 
 
 
-  /* Moves the robo forward */
-  exports.forward = function(){
-    console.log('moving forward');
-    leftFront.forward(255);
-    rightFront.forward(255);
-    leftBack.forward(255);
-    rightBack.forward(255);
-  }
-
-
-  /* Moves the robo backword */
-  exports.back = function(){
-    console.log('moving back');
-    leftFront.reverse(255);
-    rightFront.reverse(255);
-    leftBack.reverse(255);
-    rightBack.reverse(255);
-  }
-
-
-  /* Turns the robo to left direction */
-  exports.turnLeft = function(){
-    console.log('turning left');
-  }
-
-  /* Turns the robo towards right */
-  exports.turnRight = function(){
-    console.log('turning right');
-  }
-
-  /* Stop the robo */
-  exports.stop = function(){
-    console.log('stopping');
-    leftFront.stop();
-    rightFront.stop();
-    leftBack.stop();
-    rightBack.stop();
-  }
-
-  exports.board = board;
 
 
 
 });
+
+
+/* Moves the robo forward */
+exports.forward = function(){
+  console.log('moving forward');
+  leftFront.forward(255);
+  rightFront.forward(255);
+  leftBack.forward(255);
+  rightBack.forward(255);
+}
+
+
+/* Moves the robo backword */
+exports.back = function(){
+  console.log('moving back');
+  leftFront.reverse(255);
+  rightFront.reverse(255);
+  leftBack.reverse(255);
+  rightBack.reverse(255);
+}
+
+
+/* Turns the robo to left direction */
+exports.turnLeft = function(){
+  console.log('turning left');
+}
+
+/* Turns the robo towards right */
+exports.turnRight = function(){
+  console.log('turning right');
+}
+
+/* Stop the robo */
+exports.stop = function(){
+  console.log('stopping');
+  leftFront.stop();
+  rightFront.stop();
+  leftBack.stop();
+  rightBack.stop();
+}
+
+exports.board = board;
+
 
 
 
