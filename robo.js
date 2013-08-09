@@ -39,11 +39,11 @@ firebase.init()
 			}
 
 			if( motion == "left"){
-				roboMotion.left();
+				roboMotion.turnLeft();
 			}
 
 			if( motion == "right"){
-				roboMotion.right();
+				roboMotion.turnRight();
 			}
 		}
 		
