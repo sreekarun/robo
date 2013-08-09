@@ -137,12 +137,25 @@ exports.back = function(){
 
 /* Turns the robo to left direction */
 exports.turnLeft = function(){
+  /* needs to improve the logic. crude method now */
+
   console.log('turning left');
+
+  leftFront.reverse(200);
+  leftBack.reverse(200);
+
+  rightFront.forward(255);
+  rightBack.forward(255);
 }
 
 /* Turns the robo towards right */
 exports.turnRight = function(){
   console.log('turning right');
+  rightFront.reverse(200);
+  rightBack.reverse(200);
+
+  leftFront.forward(255);
+  leftBack.forward(255);
 }
 
 /* Stop the robo */
