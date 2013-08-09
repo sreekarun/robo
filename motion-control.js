@@ -7,33 +7,6 @@ var five = require("johnny-five"),
     board = new five.Board(),
     leftFront, rightFront, leftBack, rightBack;
 
-    leftFront = new five.Motor({
-      pins: {
-        pwm: 11,
-        dir: 12
-      }
-    });
-
-    rightFront = new five.Motor({
-      pins: {
-        pwm: 9,
-        dir: 8
-      }
-    });
-
-    leftBack = new five.Motor({
-      pins: {
-        pwm: 6,
-        dir: 7
-      }
-    });
-    
-    rightBack = new five.Motor({
-      pins: {
-        pwm: 3,
-        dir: 2
-      }
-    });
 
 board.on("ready", function() {
   
@@ -61,6 +34,33 @@ board.on("ready", function() {
 
 
 
+   leftFront = new five.Motor({
+     pins: {
+       pwm: 11,
+       dir: 12
+     }
+   });
+
+   rightFront = new five.Motor({
+     pins: {
+       pwm: 9,
+       dir: 8
+     }
+   });
+
+   leftBack = new five.Motor({
+     pins: {
+       pwm: 6,
+       dir: 7
+     }
+   });
+   
+   rightBack = new five.Motor({
+     pins: {
+       pwm: 3,
+       dir: 2
+     }
+   });
 
 
 
