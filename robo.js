@@ -37,6 +37,14 @@ firebase.init()
 			if( motion == "stop"){
 				roboMotion.stop();
 			}
+
+			if( motion == "left"){
+				roboMotion.left();
+			}
+
+			if( motion == "right"){
+				roboMotion.right();
+			}
 		}
 		
 	});
