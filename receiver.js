@@ -60,6 +60,10 @@ RoboEvents.Firebase.prototype.init = function(){
 		self.emit('moodChange',snapshot.val());
 	})
 
+	roboCloudStorage.motion.on('value',function(snapshot){
+		self.emit('motionControl', snapshot.val());
+	})
+
 
 	return self;
 }
