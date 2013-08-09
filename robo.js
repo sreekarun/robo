@@ -25,7 +25,7 @@ firebase.init()
 	.on('motionControl',function(motion){
 		console.log(motion + " robo");
 
-		roboMotion.board.on('ready',function(){
+		if( roboMotion.board.ready ){
 			if( motion == "forward"){
 				roboMotion.forward();
 			}
