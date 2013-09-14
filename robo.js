@@ -15,6 +15,14 @@ var firebase = new RoboEvents.Firebase;
 twitter.init()
 	.on('stream.tweet',function(data){
 		console.log(data.text);
+
+		//check if forward command is there in the stream. If yes move the robo forward
+
+		if(data.text.indexOf('forward') > -1){
+			if(roboMotion.board.ready){
+				roboMotion.forward();
+			}
+		}
 	});
 
 
