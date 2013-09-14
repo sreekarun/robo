@@ -21,6 +21,9 @@ twitter.init()
 		if(data.text.indexOf('forward') > -1){
 			if(roboMotion.board.ready){
 				roboMotion.forward();
+				setTimeout(function(){
+					roboMotion.stop();
+				}, 500);
 			}
 		}
 	});
