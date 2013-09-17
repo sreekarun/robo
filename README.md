@@ -1,4 +1,4 @@
-robo ( Latest functional code on the way - work in progress :) )
+Robo 
 ====
 
 A node based robot based on Raspberry PI and Arduino ( with johnny five )
