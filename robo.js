@@ -6,10 +6,11 @@
 
 var RoboEvents = require('./receiver.js');
 var roboMotion = require('./motion-control.js');
-
+var speaker = require('./helper/festival.js');
 
 var twitter = new RoboEvents.Twitter;
 var firebase = new RoboEvents.Firebase;
+
 
 
 twitter.init()
@@ -58,6 +59,9 @@ firebase.init()
 			}
 		}
 		
+	})
+	.on('speak',function(text){
+		speaker.speak(text);
 	});
 
 

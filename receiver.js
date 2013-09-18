@@ -64,6 +64,9 @@ RoboEvents.Firebase.prototype.init = function(){
 		self.emit('motionControl', snapshot.val());
 	})
 
+	roboCloudStorage.speak.on('value',function(snapshot){
+		self.emit('speak', snapshot.val());
+	})
 
 	return self;
 }
