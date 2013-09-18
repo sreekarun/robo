@@ -27,6 +27,15 @@ twitter.init()
 				}, 500);
 			}
 		}
+
+		// for the speech
+		if(data.text.indexOf('#speak') > -1){
+
+			//Strip the NodeRobo #tag
+			var text = data.text.replace('#NodeRobo','');
+			text = text.replace('#speak','');
+			speaker.speak(text);
+		}
 	});
 
 
