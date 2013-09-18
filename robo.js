@@ -6,7 +6,7 @@
 
 var RoboEvents = require('./receiver.js');
 var roboMotion = require('./motion-control.js');
-var speaker = require('./helper/festival.js');
+var speaker = require('./helpers/festival.js');
 
 var twitter = new RoboEvents.Twitter;
 var firebase = new RoboEvents.Firebase;
