@@ -118,18 +118,17 @@ board.on("ready", function() {
 /* Moves the robo forward */
 exports.forward = function(){
   console.log('moving forward');
-  leftFront.forward(255);
-  rightFront.forward(255);
-  //leftBack.forward(255);
-  //rightBack.forward(255);
+
+  //hack for the direction issue
+  leftFront.reverse(255);
+  rightFront.reverse(255);
 }
 
 
 /* Moves the robo backword */
 exports.back = function(){
   console.log('moving back');
-  leftFront.reverse(255);
-  rightFront.reverse(255);
+  //hack for the direction issue
   leftBack.reverse(255);
   rightBack.reverse(255);
 }
