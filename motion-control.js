@@ -129,7 +129,7 @@ exports.forward = function(){
 exports.back = function(){
   console.log('moving back');
   //hack for the direction issue
-  leftBack.reverse(255);
+  leftBack.forward(255);
   rightBack.reverse(255);
 }
 
