@@ -119,9 +119,9 @@ board.on("ready", function() {
 exports.forward = function(){
   console.log('moving forward');
   leftFront.forward(255);
-  rightFront.forward(255);
-  leftBack.forward(255);
-  rightBack.forward(255);
+  //rightFront.forward(255);
+  //leftBack.forward(255);
+  //rightBack.forward(255);
 }
 
 
