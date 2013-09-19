@@ -51,14 +51,14 @@ board.on("ready", function() {
    leftBack = new five.Motor({
      pins: {
        pwm: 6,
-       dir: 7
+       dir: 4
      }
    });
    
    rightBack = new five.Motor({
      pins: {
        pwm: 3,
-       dir: 4
+       dir: 2
      }
    });
 
