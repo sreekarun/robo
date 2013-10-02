@@ -24,7 +24,7 @@ twitter.init()
 				roboMotion.forward();
 				setTimeout(function(){
 					roboMotion.stop();
-				}, 500);
+				}, 1000);
 			}
 		}
 
