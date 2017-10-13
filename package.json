@@ -13,9 +13,9 @@
   "author": "Sreejesh Karunakaran (sreekarun)",
   "license": "BSD",
   "dependencies": {
-    "firebase": "~0.6.1",
-    "oauth": "~0.9.10",
-    "johnny-five": "~0.7.1"
+    "firebase": "^4.5.1",
+    "johnny-five": "^0.11.6",
+    "oauth": "~0.9.10"
   },
   "devDependencies": {}
 }
